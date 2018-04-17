@@ -1,0 +1,166 @@
+body{
+    color: #fff;
+    background:rgba(67, 118, 167);
+}
+
+.starting{
+    height: 100vh;
+}
+.side-bar-link{
+    display: inline-block;
+    font-size: 3rem;
+    margin-left:40%;
+    transition: color 1.5s;
+}
+.side-bar-link:hover{
+    color:rgb(251,100,49);
+}
+
+.side-bar-button a:hover{
+    opacity: 0.9;
+}
+.header-bar{
+    background: rgba(2,32,40, 0.9);
+    border-bottom: 3px rgb(251,100,49) solid;
+    color: #fff;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+}
+
+header h1, header .highlight a ,.side-bar-button{
+    letter-spacing: 0.2em;
+    font-style: oblique;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 100;
+}
+nav *{
+    margin:0;
+    padding: 0;
+}
+header nav a{
+    text-transform: uppercase;
+    font-family: 'Quicksand',sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 30px;
+}
+.activate{
+    color:rgb(251,100,49);
+}
+header li {
+    display: inline;
+    padding: 15px;
+}
+
+.side-nav{
+    height:100vh;
+    width:0.1px;
+    padding-top:70px;
+    position:fixed;
+    background:rgba(222,222,222,0.5);
+    z-index:2;
+    overflow-x: hidden;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.5s;
+}
+.side-nav:hover{
+    transition-delay: 0s;
+}
+.side-nav a{
+    padding: 20% 20% 20% 20%;
+    font-size:1.6em;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Quicksand', sans-serif;
+}
+.side-nav a:hover{
+    color:rgb(251,100,49);
+}
+
+.box-wrap{
+    margin-top: 20vh;
+    height:80vh;
+    overflow:scroll;
+}
+
+.box {
+    text-align: center;
+    border-radius: 15px;
+    background: rgba(222,222,222, 0.3);
+    height:95%;
+    color: #222;
+    transition: 1s;
+}
+
+.box:hover {
+    background: rgba(222,222,222, 1);
+}
+
+.box h3, .box p {
+    color: #222;
+    margin-bottom: 0.8rem;
+    padding: 0 1rem;
+}
+
+.box img {
+    margin: 20px 0;
+    width: 100px;
+    height: 100px;
+}
+
+.contact{
+    overflow: scroll;
+    margin-left:30vw;
+    padding-left:3vw;
+    
+}
+
+.contact p {
+    color: #eee;
+    font-family:'Rajdhani' ;
+    padding: 20px 5%;
+    text-align: left;
+    letter-spacing: 0.1em;
+    word-spacing: 0.1em;
+    line-height: 2em;
+    font-size: 40px;
+}
+
+@media(max-width:1300px) {
+    .boxhead p{
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+}
+@media(max-width:1199px){
+    .My-nav-bar{
+        display: none;
+    }
+    .title h1, .title p, .boxhead h1 {
+        font-size: 50px;
+    }
+    .contact p{
+        font-size:32px;
+    }
+    .side-nav a{
+        font-size:1em;
+    }
+    .side-bar-link{
+        font-size:2em;
+
+    }
+}
+@media(max-width:768px) {
+    .title h1, .title p, .boxhead h1 {
+        font-size: 30px;
+    }
+    .contact p{
+        font-size:18px;
+    }
+    .branding > h1{
+        font-size:30px;
+    }
+}

@@ -1,0 +1,40 @@
+body{
+    background:rgb(67, 118, 167);
+}
+p {
+    font-family: 'Quicksand';
+    text-align: center;
+    color:#eee;
+}
+
+h1, h2, a {
+    font-family: 'Raleway';
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgb(52,0,0);
+}
+.div{
+    margin:0;
+    padding:0;
+}
+.pages {
+    text-transform: uppercase;
+    height: 100vh;
+}
+.text {
+    display: flex;
+    justify-items: center;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 27px;
+    line-height: 3em;
+    border-top: 2px rgb(52,0,0) solid;
+}
+@media(max-width:960px) {
+    .text {
+        display: grid;
+        padding:10vh 0;
+    }
+}

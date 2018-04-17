@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LIU ZHIHENG</title>
+    <link rel="icon" href="../img/icon.ico">
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Amaranth|Roboto|Nunito+Sans|Quicksand|Rajdhani|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/loader.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script type="text/javascript" src="../js/loader.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" href="../css/main-site.css"></link>
+    <link rel="stylesheet" href="../css/feedback.css"></link>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header-bar">
+        <div class="row align-items-center">
+            <div class='col col-xl-1 col-2'>
+                <div class="side-bar-button">
+                    <i class="side-bar-link fa fa-caret-right" onclick="openSideMenu()" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="col col-xl-4 col-8" style='text-align:center;'>
+                <div class="branding">
+                    <h1><span class="highlight"><a href="./cover.html">Zayn</a></span> Jarvis</h1>
+                </div>
+            </div>
+            <div class="col col-xl-5 offset-xl-2">
+                <nav class='My-nav-bar'>
+                    <ul>
+                        <li><a class='nav-list list-item-1' href='./main.html#first'>Home</a></li>
+                        <li><a class='nav-list list-item-5' href='./profile.html'>Profile</a></li>
+                        <li><a class='nav-list list-item-4 activate' href='./feedback.html'>Feedback</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Side Menu -->
+    <div class="side-nav" id='side-menu' onmouseover="openSideMenu()" onmouseout="closeSideMenu()">
+        <a class='nav-list list-item-1' href="./main.html#first">Home</a>
+        <a class='nav-list list-item-2' href="./main.html#second">Project</a>
+        <a class='nav-list list-item-3' href="./main.html#third">Contact</a>
+        <a class='nav-list list-item-5' href='./profile.html'>Profile</a>
+        <a class='nav-list list-item-4 activate' href="./feedback.html">Feedback</a>
+    </div>
+
+    <!-- Feedback Section -->
+    <section class="my-page row justify-content-center" id="first" style='position:fixed;'>
+        <div class="feedback-box col-8">
+
+            <div>
+                <h1 style='margin:0 0 30px 0;color:coral;font-family: Quicksand;'> Feedback</h1>
+            </div>
+            <form id="myForm" autocomplete="off">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" id="userName" aria-describedby="emailHelp" placeholder="Enter name">
+                    <small id="emailHelp" class="form-text text-muted">You may name yourself Donald Trump. I don't really care.</small>
+                </div>
+                <div class="form-group">
+                    <label>Feedback | Developer Messages</label>
+                    <textarea class="form-control" id="userFeedback" rows="5" placeholder="Send anything you would like to share"></textarea>
+                </div>
+                <button type="submit" class="btn btn-light submit-button">Submit</button>
+                <div id="message"></div>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- footer -->
+    <footer class='row ' style='position : fixed;bottom:0;z-index:-1;' id='feedback-footer'>
+        <p class='col-12' style='padding-left:4.3rem;'>Copyright &copy; 2017 Liu Zhiheng</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/feedback.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        particlesJS.load('particles-js', '../json/particles.json', function() {
+            console.log('particles.json loaded...');
+        });
+    </script>
+
+</body>
+
+</html>

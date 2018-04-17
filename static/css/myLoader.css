@@ -1,0 +1,69 @@
+/*<div id="loaderWrapper">
+    <div id="loader">
+        <div id="largeBox"></div>
+        <div id="smallBox"></div>
+    </div>
+    <div id = 'loaderText'>Loading...</div>
+</div>*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+#loaderWrapper{
+    z-index:3;
+    position:fixed;
+    text-align: center;
+    display: flex;
+    transition: 1s;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: #222;
+    transition: opacity 0.8s ease-in-out;
+}
+#loader{
+    z-index:4;
+    height:7rem;
+    width:7rem;
+    background: coral;
+    opacity:1;
+    border-radius: 100%;
+    animation: myAni 2s alternate infinite linear;
+}
+#largeBox{
+    z-index:4;
+    height: 100%;
+    /*margin:10px 10px 10px 10px;*/
+    background: #222;
+    border-radius:100%;
+    opacity:1;
+    animation: smallBoxAnim 2s alternate infinite linear;
+
+}
+
+#loaderText{
+    z-index:4;
+    font-family:'Raleway';
+    font-size: 7rem;
+    margin-left: 30%;
+    color:coral;
+    width:100hw;
+    opacity:0;
+    animation: myAni 2s alternate infinite linear;
+}
+@keyframes myAni{
+    0% {
+        opacity:1;
+    }
+    100% {
+        opacity:0.3;
+    }
+    /*%100 {border-radius:0;opacity:1;}*/
+}
+@keyframes smallBoxAnim {
+    0% {transform: scale(0.8);}
+    100% {transform: scale(0.95);}
+}

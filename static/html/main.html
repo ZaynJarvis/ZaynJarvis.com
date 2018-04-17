@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='author' content='Liu Zhiheng'>
+    <link rel="icon" href="../img/icon.ico">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LIU ZHIHENG</title>
+    <link rel="icon" href="../img/icon.ico">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" href="../css/main-site.css"></link>
+    <link rel="stylesheet" type="text/css" href="../css/loader.css">
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Amaranth|Roboto|Nunito+Sans|Quicksand|Rajdhani|Raleway" rel="stylesheet">
+    <script type="text/javascript" src="../js/loader.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-bar">
+        <div class="row align-items-center">
+            <div class='col col-xl-1 col-2'>
+                <div class="side-bar-button">
+                    <i class="side-bar-link fa fa-caret-right" onclick="openSideMenu()" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="col col-xl-4 col-8" style='text-align:center;'>
+                <div class="branding">
+                    <h1><span class="highlight"><a href="./cover.html">Zayn</a></span> Jarvis</h1>
+                </div>
+            </div>
+            <div class="col col-xl-5 offset-xl-2">
+                <nav class='My-nav-bar'>
+                    <ul>
+                        <li><a class='nav-list list-item-1 activate' href='#first'>Home</a></li>
+                        <li><a class='nav-list list-item-5' href='./profile.html'>Profile</a></li>
+                        <li><a class='nav-list list-item-4' href='./feedback.html'>Feedback</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Side Menu -->
+    <div class="side-nav" id='side-menu' onmouseover="openSideMenu()" onmouseout="closeSideMenu()">
+        <a class='nav-list list-item-1' href="#first">Home</a>
+        <a class='nav-list list-item-2' href="#second">Project</a>
+        <a class='nav-list list-item-3' href="#third">Contact</a>
+        <a class='nav-list list-item-5' href='./profile.html'>Profile</a>
+        <a class='nav-list list-item-4' href="./feedback.html">Feedback</a>
+    </div>
+    <!-- Project Section -->
+    <section class='my-page' id="second">
+        <div class="my-container">
+            <div class="boxhead">
+                <!-- <h1>PROJECT</h1> -->
+            </div>
+            <section class='box-wrap'>
+                <div class='row'>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="box">
+                            <img src="../img/logo_1.png" alt="N.A.">
+                            <h3>Chat Bot</h3>
+                            <p>
+                                Club Assistant, student association data management
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="box">
+                            <img src="../img/LIU.png" alt="">
+                            <a href="https://zaynjarvis.com"><h3>Website</h3></a>
+                            <p>
+                                Learning CSS and JAVASCRIPT for Web development
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="box">
+                            <img src="../img/Garage.png" alt="">
+                            <h3>Garage@EEE</h3>
+                            <p> 
+                                I am a software trainer of Garage@EEE. Python & JavaScript
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="box">
+                            <img src="../img/logo_4.ico" alt="">
+                            <h3>Ubuntu</h3>
+                            <p>
+                                Learnt Linux command line, SSH and Docker for file transfer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <div class="my-page" id='third'>
+        <div class="my-container">
+            </div>
+            <div class="contact">
+                <p>
+                    Email Address :<br> Zaynjarvis@gmail.com
+                </p>
+                <p>
+                    Phone Number :<br> +86 83099012
+                </p>
+                <p onclick="githubNavigate()">
+                    Github Account :<br>https://github.com/ZaynJarvis
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer class='row ' style='position : fixed;bottom:0;z-index:-1;' id='feedback-footer'>
+        <p class='col-12' style='padding-left:4.3rem;'>Copyright &copy; 2017 Liu Zhiheng</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        particlesJS.load('particles-js', '../json/particles.json', function() {
+            console.log('particles.json loaded...');
+        });
+    </script>
+</body>
+
+</html>

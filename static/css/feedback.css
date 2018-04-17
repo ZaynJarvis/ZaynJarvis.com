@@ -1,0 +1,43 @@
+*{
+    font-family:'Quicksand';
+}
+.feedback-box{
+    text-align: center;
+    height:80%;
+    overflow: scroll;
+    background: rgba(23,23,23,0.8);
+    padding: 30px 10%;
+    border-radius: 10px;
+    box-shadow: 1.8px 1.8px 1.8px 1.8px darkgrey;
+}
+.well{
+    background: rgba(255,255,255,0.6);
+    opacity:0.6;
+    border-radius:15px;
+    margin:10px 0;
+    color:#222;
+    border:3px silver solid;
+    transition: opacity 1s;
+}
+.well:hover{
+    opacity:1;
+}
+.submit-button:hover{
+    opacity:0.8;
+}
+.submit-button:active{
+    border:silver 1px solid;
+    background: coral;
+    color:#fff;
+}
+@media(max-width:1199px){
+    section *,footer{
+        font-size: 0.5rem !important;
+    }
+    .feedback-box{
+        margin-top:10%;
+    }
+    #feedback-footer{
+        opacity: 0;
+    }
+}

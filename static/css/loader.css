@@ -1,0 +1,54 @@
+#particles-js {
+    background-color: #333;
+    position: fixed;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh !important;
+    width: 100vw !important;
+    margin: 0;
+    z-index: 3;
+    opacity : 1;
+    transition: 1s;
+}
+
+#loader{
+    position: absolute;
+    top:40%;
+    height:15%;
+    left:38.2%;
+    width: 0%;
+    /*background: #272727;*/
+}
+
+#loader #largeBox {
+    animation: myAni 2s ease-in-out infinite alternate;
+    position: absolute;
+    top:0px;
+    height:100%;
+    width:100%;
+    color:#eee;
+    font-size: 100px;
+    text-align: center;
+    z-index: 4;
+}
+@keyframes myAni{
+    0% {
+        opacity:1;
+    }
+    100% {
+        opacity:0.5;
+    }
+}
+@media(max-width:1600px){
+    #loader #largeBox {
+        font-size: 60px;
+    }
+}
+@media(max-width:1600px){
+    #loader{
+        width:100%;
+        left:0;
+    }
+}
