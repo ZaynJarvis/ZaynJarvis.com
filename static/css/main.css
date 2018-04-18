@@ -1,7 +1,6 @@
 * {
     font-family: 'Quicksand', serif;
     box-sizing: border-box !important;
-    /*Hide scroll button*/
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
 }
