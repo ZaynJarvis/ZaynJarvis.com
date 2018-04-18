@@ -3,7 +3,7 @@ function openSideMenu() {
 }
 
 function closeSideMenu() {
-    document.getElementById('side-menu').style.width = '0.1%';
+    document.getElementById('side-menu').style.width = '0.1px';
 }
 window.sr = ScrollReveal();
 sr.reveal('.title > h1', {
