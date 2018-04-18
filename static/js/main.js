@@ -5,18 +5,22 @@ function openSideMenu() {
 function closeSideMenu() {
     document.getElementById('side-menu').style.width = '0.1px';
 }
-window.sr = ScrollReveal();
-sr.reveal('.title > h1', {
-    duration: 2000,
-    origin: 'top'
-});
-sr.reveal('.title > p', {
-    delay: 2000,
-    duration: 1000,
-    origin: 'left',
-    distance: '300px'
-});
+try{
 
+    window.sr = ScrollReveal();
+    sr.reveal('.title > h1', {
+        duration: 2000,
+        origin: 'top'
+    });
+    sr.reveal('.title > p', {
+        delay: 2000,
+        duration: 1000,
+        origin: 'left',
+        distance: '300px'
+    });
+}catch(e){
+    
+}
 function githubNavigate() {
     var win = window.open('https://github.com/ZaynJarvis', '_blank');
     win.focus();

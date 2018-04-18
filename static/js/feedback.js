@@ -1,7 +1,7 @@
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth()+1; //January is 0!
-var yyyy = today.getFullYear();
+let today = new Date();
+let dd = today.getDate();
+let mm = today.getMonth()+1; //January is 0!
+let yyyy = today.getFullYear();
 if(dd<10) {
     dd = '0'+dd
 }
@@ -10,55 +10,52 @@ if(mm<10) {
     mm = '0'+mm
 }
 today = dd + '/' + mm + '/' + yyyy;
-document.getElementById('myForm').addEventListener('submit',saveFeedback)
-var x = localStorage.getItem('message');
-if(x!==null){
-    printMessage();
-}
-function saveFeedback(e){
-    e.preventDefault();
-    var userName = document.getElementById('userName').value;
-    var userFeedback = document.getElementById('userFeedback').value;
-    var message = {
-        name:userName,
-        feedback:userFeedback,
-        date:today
-    }
-    if(message.feedback==''){
-        return false;
-    }
-    if(localStorage.getItem('message')===null){
-        var messages = [];
-        messages.push(message);
-        localStorage.setItem('message',JSON.stringify(messages));
-    }
-    else{
-        var messages = JSON.parse(localStorage.getItem('message'));
-        messages.push(message);
-        localStorage.setItem('message',JSON.stringify(messages));
-    }
-    document.getElementById('myForm').reset();
-    printMessage();
-}
 
-function printMessage(){
-    var messages = JSON.parse(localStorage.getItem('message'));
-    var i = 0;
-    console.log(messages);
-    var vacancy = document.getElementById('message');
-    var html ='<blockquote class = "blockquote well text-center">'+
-    '<h3>'+messages[i].feedback+'</h3>'+'<footer class="blockquote-footer">'+messages[i].name+' @ '+messages[i].date+'<cite>'+'</blockquote>';
-    var yourName = '';
+$(document).ready(()=>{
+    $('#myForm').on('submit',(e)=>{
+        e.preventDefault();
+        let userName = $('#userName').val();
+        let userFeedback = $('#userFeedback').val();
 
+        $.ajax({
+            url: "https://api.mlab.com/api/1/databases/zaynfeedback/collections/test?apiKey=awWz2y7VL9sR6uXaXs_CRsAhG-9AXkNo",
+            data: JSON.stringify({ 
+                "userName":userName,
+                "feedback": userFeedback,
+                "date": today
+            }),
+            type: "POST",
+            contentType: "application/json",
+            success: (data) => {
+                getFeedback();
+            },
+            error: (xhr, status, err) => {console.log(error);}
+        });
+    })
+})
+
+function getFeedback(){
+    $.ajax({
+        url: "https://api.mlab.com/api/1/databases/zaynfeedback/collections/test?apiKey=awWz2y7VL9sR6uXaXs_CRsAhG-9AXkNo"
+    }).done((data) => printMessage(data));
+}
+getFeedback();
+
+function printMessage(messages){
+    let i = 0;
+    let vacancy = document.getElementById('message');
+    let html ='<blockquote class = "blockquote well text-center">'+
+    '<h3>'+messages[i].feedback+'</h3>'+'<footer class="blockquote-footer">'+messages[i].userName+' @ '+messages[i].date+'<cite>'+'</blockquote>';
+    let yourName = '';
     for (i = (messages.length-1);i>0;i--){
         console.log(i);
         if(messages[i].feedback!=null && messages[i].feedback!=='')
         {
-            if(messages[i].name==''){
+            if(messages[i].userName==''){
                 yourName = 'No One';
             }
             else{
-                yourName = messages[i].name;
+                yourName = messages[i].userName;
             }
 
             html+= '<blockquote class = "blockquote well text-center">'+
