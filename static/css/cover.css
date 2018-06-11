@@ -1,5 +1,7 @@
 body{
-    background:rgb(67, 118, 167);
+    background-image:url('../img/Z-bg.png');
+    background-attachment: fixed;
+    background-position: center;
 }
 p {
     font-family: 'Quicksand';
